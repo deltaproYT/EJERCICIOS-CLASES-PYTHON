@@ -45,7 +45,7 @@ def ejercicio_3_1():
         print(f"Intento de conexion #{intento}...")
 
         if intento == 3:
-            conectado = True
+            # conectado = True
             print("  -> Conexion exitosa!")
 
         intento += 1   # CRITICO: actualizar la variable de control
@@ -103,22 +103,10 @@ def ejercicio_3_3():
     #         print("Opcion invalida")
 
 
-# =============================================================================
-#  MAIN
-# =============================================================================
-def main():
-    print("=" * 60)
-    print("CLASE - SEMANA 3 - PARTE 3: BUCLE WHILE")
-    print("=" * 60)
+print("=" * 60)
+print("CLASE - SEMANA 3 - PARTE 3: BUCLE WHILE")
+print("=" * 60)
 
-    ejercicio_3_1()
-    ejercicio_3_2()
-    ejercicio_3_3()
-
-    print("\n" + "=" * 60)
-    print("FIN - Continuar con: clase_04_integrador.py")
-    print("=" * 60)
-
-
-if __name__ == "__main__":
-    main()
+ejercicio_3_1()
+# ejercicio_3_2()
+# ejercicio_3_3()

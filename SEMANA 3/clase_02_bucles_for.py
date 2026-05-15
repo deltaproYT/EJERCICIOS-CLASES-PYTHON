@@ -86,10 +86,10 @@ def ejercicio_2_3():
     # OBSERVACION: enumerate() devuelve tuplas (indice, valor). Python las
     # desempaqueta automaticamente en las dos variables del for.
 
-    hosts = ["10.0.0.1", "10.0.0.2", "10.0.0.3", "10.0.0.4"]
+    lista_host = ["10.0.0.1", "10.0.0.2", "10.0.0.3", "10.0.0.4"]
 
-    for posicion, host in enumerate(hosts, start=1):
-        print(f"Host #{posicion}: {host}")
+    for indice, valor in enumerate(lista_host, start=1):
+        print(f"Host #{indice}: {valor}")
 
 
 def ejercicio_2_4():
@@ -98,8 +98,8 @@ def ejercicio_2_4():
     # OBSERVACION: zip() empareja listas elemento por elemento. Si una es
     # mas corta, zip se detiene al agotarla.
 
-    puertos   = [22, 80, 443, 3306, 3389]
-    servicios = ["SSH", "HTTP", "HTTPS", "MySQL", "RDP"]
+    puertos   = [90, 22, 80, 443, 3306, 3389]
+    servicios = ["DESCONOCIDO", "SSH", "HTTP", "HTTPS", "MySQL", "RDP"]
 
     for puerto, servicio in zip(puertos, servicios):
         print(f"Puerto {puerto:>5}  ->  {servicio}")
@@ -117,6 +117,7 @@ def ejercicio_2_5():
     contador_simbolos = 0
 
     for caracter in contrasena:
+        print(f"Caracter: '{caracter}'")
         if not caracter.isalnum():
             contador_simbolos += 1
 
@@ -145,6 +146,7 @@ def control_break():
             break              # SALIMOS - no revisamos los demas
         print(f"  {ip}: OK")
 
+    print(f"Salida")
     # COMO FUNCIONA: Al ejecutarse break, se interrumpe el bucle y la
     # ejecucion continua DESPUES del for. No se hacen mas iteraciones.
 
@@ -198,7 +200,7 @@ def control_pass():
 
     for usuario in usuarios:
         if usuario == "root":
-            pass    # TODO: implementar registro de auditoria
+            pass
         else:
             print(f"Usuario procesado: {usuario}")
 
@@ -225,10 +227,8 @@ print("=" * 60)
 # control_break()
 # control_continue()
 # control_else_de_bucle()
-# control_pass()
+control_pass()
 
 
-for x in range(0, 20):
-    print(f"Valor de X: {x}")
 
 
